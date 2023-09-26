@@ -1,7 +1,9 @@
-export default class Projects {
+
+
+export default class Project {
     constructor(name){
         this.name = name;
-        this.todos = [];
+        this.tasks = [];
     }
 
     getName(){
@@ -13,14 +15,14 @@ export default class Projects {
     }
 
     getTodos(){
-        return this.todos;
+        return this.tasks;
     }
 
-    addTodo(todo){
-        this.todos.push(todo);        
+    addTodo(task){
+        this.tasks.push(task);        
     }
 
-    removeTodo(todo){
-        delete this.todos[todo];
+    removeTodo(task){
+        delete this.tasks[task];
     }
 }
