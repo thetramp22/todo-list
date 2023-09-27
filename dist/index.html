@@ -20,7 +20,7 @@
             </button>
         </div>
         <div class="header-right">
-            <button class="add-task btn" id="addTaskBtn">
+            <button class="add-task btn" id="openAddTaskModalBtn">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
@@ -30,21 +30,21 @@
     <aside>
         <div class="sidebar-wrapper">
             <ul class="menu tasks">
-                <li>
+                <li class="active" id="tasksTotal">
                     <i class="fa-solid fa-list-check"></i>
-                    <p>All Tasks</p><span><p id="tasksTotal">2</p></span>
+                    <p>All Tasks</p><span><p>2</p></span>
                 </li>
-                <li>
+                <li id="tasksTodayTotal">
                     <i class="fa-solid fa-calendar-day"></i>
-                    <p>Today</p><span><p id="tasksTodayTotal">2</p></span>
+                    <p>Today</p><span><p>2</p></span>
                 </li>
-                <li>
+                <li id="tasksThisWeekTotal">
                     <i class="fa-solid fa-calendar-day"></i>
-                    <p>This Week</p><span><p id="tasksThisWeekTotal">2</p></span>
+                    <p>This Week</p><span><p>2</p></span>
                 </li>
-                <li>
+                <li id="tasksImportantTotal">
                     <i class="fa-solid fa-star"></i>
-                    <p>Important</p><span><p id="tasksImportantTotal">2</p></span>
+                    <p>Important</p><span><p>2</p></span>
                 </li>
             </ul>
             <p>Projects</p>
@@ -54,13 +54,42 @@
         </div>
     </aside>
 
+    <!-- TASK LIST -->
     <main>
-
+        <div class="main-wrapper" id="main-wrapper">
+            <div class="main-heading">
+                <h1>All Tasks</h1>
+                <button class="btn with-text"><i class="fa-solid fa-plus"></i>Add task</button>
+            </div>
+            <div id="task-list-display">
+                <div class="task-card">
+                    <p>Task Name</p>
+                    <p>Description</p>
+                    <p>due date</p>
+                    <i class="fa-regular fa-star"></i>
+                    
+                </div>
+            </div>
+        </div>
     </main>
 
-    <div class="modal add-task">
-        
-    </div>
+    <!-- ADD TASK MODAL -->
+    <section class="modal add-task" id="addTaskModal">
+        <div class="add-task-inputs">
+            <input type="text" id="taskNameInput" placeholder="Task Name">
+            <input type="text" id="descriptionInput" placeholder="Description">
+            <input type="date" id="dueDateInput">
+        </div>
+        <div class="add-task-btns">
+            <button id="taskPriorityBtn" class="btn black" data-priority-important="false">
+                <i class="fa-regular fa-star"></i>
+            </button>
+            <div>
+                <button id="cancelAddTaskModalBtn" class="btn black cancel">Cancel</button>
+                <button id="addTaskBtn" class="btn black submit">Add task</button>
+            </div>
+        </div>
+    </section>
 
     <script src="main.js"></script>
 </body>
