@@ -70,6 +70,10 @@ function renderTasks(){
     const tasklistDisplay = document.getElementById('task-list-display');
 
     for(let task in tasklist){
-        createTaskCard();
+        tasklistDisplay.appendChild(createTaskCard(task));
     }
+}
+
+function createTaskCard(task) {
+    
 }

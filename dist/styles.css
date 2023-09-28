@@ -118,6 +118,33 @@ main {
     color: var(--black)
 }
 
+.task-list-display {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-card {
+    padding: 10px;
+    border-left: 5px solid var(--purple);
+    box-shadow: 2px 2px 15px -8px;
+}
+
+.task-card-header {
+    display: flex;
+    align-items: flex-end;
+}
+
+.task-card-header p:first-of-type {
+    font-size: 1.2rem;
+}
+
+.task-card-header p:last-of-type {
+    margin-left: auto;
+}
+
+/* MODAL */
+
 .modal {
     position: absolute;
     z-index: 1;
